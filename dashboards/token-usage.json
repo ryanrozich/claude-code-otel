@@ -290,7 +290,8 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "decimals": 0
         },
         "overrides": [
           {
@@ -386,7 +387,8 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "decimals": 0
         },
         "overrides": [
           {
@@ -489,7 +491,8 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "locale"
+          "unit": "locale",
+          "decimals": 0
         },
         "overrides": [
           {
