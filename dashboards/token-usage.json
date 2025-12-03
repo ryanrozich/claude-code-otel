@@ -633,14 +633,14 @@
           "placement": "bottom",
           "showLegend": false
         },
-        "orientation": "horizontal",
+        "orientation": "vertical",
         "showValue": "auto",
         "stacking": "none",
         "tooltip": {
           "mode": "single",
           "sort": "none"
         },
-        "xTickLabelRotation": 0,
+        "xTickLabelRotation": -45,
         "xTickLabelSpacing": 0
       },
       "targets": [
