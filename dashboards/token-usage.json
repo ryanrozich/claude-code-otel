@@ -290,7 +290,7 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "short"
+          "unit": "locale"
         },
         "overrides": [
           {
@@ -313,7 +313,7 @@
       },
       "options": {
         "legend": {
-          "calcs": ["lastNotNull"],
+          "calcs": ["sum", "mean"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
@@ -386,7 +386,7 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "short"
+          "unit": "locale"
         },
         "overrides": [
           {
@@ -489,7 +489,7 @@
               {"color": "green", "value": null}
             ]
           },
-          "unit": "short"
+          "unit": "locale"
         },
         "overrides": [
           {
@@ -508,7 +508,7 @@
       },
       "options": {
         "legend": {
-          "calcs": ["lastNotNull"],
+          "calcs": ["sum", "mean"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
