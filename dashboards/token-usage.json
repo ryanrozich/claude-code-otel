@@ -313,7 +313,7 @@
       },
       "options": {
         "legend": {
-          "calcs": ["sum", "mean"],
+          "calcs": ["lastNotNull"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
@@ -409,7 +409,7 @@
       },
       "options": {
         "legend": {
-          "calcs": ["sum", "mean"],
+          "calcs": ["lastNotNull"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true
@@ -508,7 +508,7 @@
       },
       "options": {
         "legend": {
-          "calcs": ["sum", "mean"],
+          "calcs": ["lastNotNull"],
           "displayMode": "table",
           "placement": "bottom",
           "showLegend": true

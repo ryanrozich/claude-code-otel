@@ -282,7 +282,7 @@
         ]
       },
       "options": {
-        "legend": {"displayMode": "table", "placement": "bottom", "calcs": ["sum", "mean"], "showLegend": true},
+        "legend": {"displayMode": "table", "placement": "bottom", "calcs": ["lastNotNull"], "showLegend": true},
         "tooltip": {"mode": "multi", "sort": "desc"}
       }
     },
