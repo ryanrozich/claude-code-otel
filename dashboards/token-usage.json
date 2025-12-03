@@ -601,8 +601,8 @@
     },
     {
       "id": 9,
-      "title": "Top Sessions by Token Usage",
-      "type": "barchart",
+      "title": "Token Usage by Session",
+      "type": "timeseries",
       "gridPos": {"h": 8, "w": 12, "x": 0, "y": 25},
       "datasource": {
         "type": "prometheus",
@@ -612,6 +612,36 @@
         "defaults": {
           "color": {
             "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "normal"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
           },
           "mappings": [],
           "thresholds": {
@@ -625,23 +655,16 @@
         "overrides": []
       },
       "options": {
-        "barRadius": 0,
-        "barWidth": 0.8,
-        "groupWidth": 0.7,
         "legend": {
-          "displayMode": "hidden",
+          "calcs": ["sum"],
+          "displayMode": "table",
           "placement": "bottom",
-          "showLegend": false
+          "showLegend": true
         },
-        "orientation": "vertical",
-        "showValue": "auto",
-        "stacking": "none",
         "tooltip": {
-          "mode": "single",
-          "sort": "none"
-        },
-        "xTickLabelRotation": -45,
-        "xTickLabelSpacing": 0
+          "mode": "multi",
+          "sort": "desc"
+        }
       },
       "targets": [
         {
@@ -649,7 +672,7 @@
             "type": "prometheus",
             "uid": "prometheus"
           },
-          "expr": "topk(10, sum by (session_id) (increase(claude_code_token_usage_tokens_total{job=\"otel-collector\"}[$__range])))",
+          "expr": "topk(10, sum by (session_id) (rate(claude_code_token_usage_tokens_total{job=\"otel-collector\"}[5m])))",
           "legendFormat": "{{session_id}}",
           "refId": "A"
         }

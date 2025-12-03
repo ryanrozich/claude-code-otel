@@ -1456,7 +1456,7 @@
             "type": "prometheus",
             "uid": "prometheus"
           },
-          "expr": "sum(increase(claude_code_commit_count_total{job=\"otel-collector\"}[1h])) or vector(0)",
+          "expr": "sum(claude_code_commit_count_total{job=\"otel-collector\"}) or vector(0)",
           "interval": "",
           "legendFormat": "Commits",
           "refId": "A"
@@ -1466,13 +1466,13 @@
             "type": "prometheus",
             "uid": "prometheus"
           },
-          "expr": "sum(increase(claude_code_pull_request_count_total{job=\"otel-collector\"}[1h])) or vector(0)",
+          "expr": "sum(claude_code_pull_request_count_total{job=\"otel-collector\"}) or vector(0)",
           "interval": "",
           "legendFormat": "Pull Requests",
           "refId": "B"
         }
       ],
-      "title": "Development Activity (Hourly)",
+      "title": "Cumulative Development Activity",
       "type": "timeseries"
     },
     {
