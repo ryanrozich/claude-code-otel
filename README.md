@@ -8,19 +8,26 @@ A comprehensive observability solution for monitoring Claude Code usage, perform
 
 ## 📸 Dashboard Screenshots
 
-### 💰 Cost & Usage Analysis
-Track spending across different Claude models with detailed breakdowns of costs, API requests, and token usage patterns.
+### 📊 Claude Code Dashboard
+The main operations dashboard with comprehensive visibility into sessions, costs, tool usage, performance, and real-time event logs.
 
-<img src="docs/images/cost-usage-analytics.png" alt="Cost & Usage Analysis Dashboard" width="800">
+<img src="docs/images/claude-code-dashboard.png" alt="Claude Code Dashboard" width="800">
 
-*Features: Model cost comparison, API request tracking, token usage breakdown by type*
+*Sections: Overview stats, Cost & Usage Analysis, Tool Usage & Performance, Performance & Errors, User Activity & Productivity, Event Logs*
 
-### 📊 User Activity & Productivity 
-Monitor development productivity with comprehensive session analytics, tool usage patterns, and code change metrics.
+### 🚀 Developer Productivity Dashboard
+Executive cockpit view with hero stats, activity timelines, tool breakdown, code velocity, and cost intelligence.
 
-<img src="docs/images/user-activity.png" alt="User Activity & Productivity Dashboard" width="800">
+<img src="docs/images/developer-productivity-dashboard.png" alt="Developer Productivity Dashboard" width="800">
 
-*Features: Session tracking, tool performance metrics, code productivity insights*
+*Sections: Hero Stats, Activity Timeline, What Claude Did, Cost Intelligence, Live Activity*
+
+### 🎯 Token Usage Analysis Dashboard
+Deep-dive into token consumption patterns, model distribution, session analysis, and cache efficiency metrics.
+
+<img src="docs/images/token-usage-dashboard.png" alt="Token Usage Analysis Dashboard" width="800">
+
+*Sections: Overview, Token Usage Over Time, Model Analysis, Session Analysis, Cache Intelligence*
 
 ## 🎯 Features
 
@@ -155,33 +162,34 @@ Access comprehensive analytics through the Grafana dashboard at http://localhost
 - **Session Tracking**: Active sessions and productivity metrics
 - **Error Analysis**: API errors and troubleshooting information
 
-## 📋 Dashboard Sections
+## 📋 Available Dashboards
 
-The Grafana dashboard is organized into sections reflecting the observability documentation recommendations:
+Three specialized dashboards are included for different analysis needs:
 
-### 📊 Overview
-- Active sessions, cost, token usage, lines of code changed
+### 📊 Claude Code Dashboard (`claude-code-dashboard.json`)
+The main operations dashboard for day-to-day monitoring:
+- **Overview**: Active sessions, cost, token usage, lines of code
+- **Cost & Usage Analysis**: Cost trends by model, token usage breakdown, API request tracking
+- **Tool Usage & Performance**: Tool frequency, success rates, cumulative usage
+- **Performance & Errors**: API latency by model, error rate tracking
+- **User Activity & Productivity**: Code changes, commits, pull requests
+- **Event Logs**: Real-time tool execution events and API errors
 
-### 💰 Cost & Usage Analysis  
-- Cost trends by model, token usage breakdown
-- **NEW**: API request count tracking by model version
-- Implements cost monitoring recommendations
+### 🚀 Developer Productivity Dashboard (`dashboards/developer-productivity.json`)
+Executive cockpit for productivity insights:
+- **Hero Stats**: Today's spend, tokens used, lines changed, tool calls, cache efficiency
+- **Activity Timeline**: Cost and token usage over time with model breakdown
+- **What Claude Did**: Top tools used, code velocity (lines added/removed)
+- **Cost Intelligence**: Spending by model over time, token breakdown, cache savings
+- **Live Activity**: Recent tool executions and errors
 
-### 🔧 Tool Usage & Performance
-- Tool frequency and success rates
-- Performance bottleneck identification
-
-### ⚡ Performance & Errors
-- API latency by model, error rate tracking
-- Performance monitoring as recommended
-
-### 📝 User Activity & Productivity
-- Code changes, commits, pull requests
-- Productivity measurement insights
-
-### 🔍 Event Logs
-- Real-time tool execution events and API errors
-- Structured log analysis for troubleshooting
+### 🎯 Token Usage Analysis (`dashboards/token-usage.json`)
+Deep-dive analysis for token optimization:
+- **Overview**: Total tokens, token rate, cache efficiency, estimated cost
+- **Token Usage Over Time**: Rate by type, cumulative usage trends
+- **Model Analysis**: Tokens by model over time, model distribution pie chart
+- **Session Analysis**: Top sessions by token usage, active sessions over time
+- **Cache Intelligence**: Cache efficiency over time, cache savings estimate
 
 ## 🔧 Advanced Configuration
 
