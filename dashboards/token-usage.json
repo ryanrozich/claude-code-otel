@@ -243,7 +243,7 @@
       "id": 5,
       "title": "Total Token Usage",
       "type": "timeseries",
-      "gridPos": {"h": 7, "w": 24, "x": 0, "y": 7},
+      "gridPos": {"h": 9, "w": 24, "x": 0, "y": 7},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -285,14 +285,14 @@
       "id": 106,
       "title": "Token Type Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 14},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 16},
       "collapsed": false
     },
     {
       "id": 14,
       "title": "Token Rate by Type",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 15},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 17},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -331,7 +331,7 @@
       "id": 15,
       "title": "Token Type Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 8, "x": 16, "y": 15},
+      "gridPos": {"h": 16, "w": 6, "x": 18, "y": 17},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -354,7 +354,7 @@
       "id": 6,
       "title": "Cumulative Token Usage",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 23},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 25},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -394,14 +394,14 @@
       "id": 102,
       "title": "Model Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 31},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 33},
       "collapsed": false
     },
     {
       "id": 7,
       "title": "Tokens by Model Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 32},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 34},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -494,7 +494,7 @@
       "id": 8,
       "title": "Model Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 8, "x": 16, "y": 32},
+      "gridPos": {"h": 16, "w": 6, "x": 18, "y": 34},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -516,7 +516,7 @@
       "id": 16,
       "title": "Cumulative by Model",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 40},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 42},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -544,14 +544,14 @@
       "id": 103,
       "title": "Session Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 48},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 50},
       "collapsed": false
     },
     {
       "id": 9,
       "title": "Token Usage by Session",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 49},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 51},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -630,7 +630,7 @@
       "id": 17,
       "title": "Top Sessions Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 8, "x": 16, "y": 49},
+      "gridPos": {"h": 16, "w": 6, "x": 18, "y": 51},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -648,7 +648,7 @@
       "id": 10,
       "title": "Active Sessions Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 57},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 59},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -729,14 +729,14 @@
       "id": 104,
       "title": "Cache Intelligence",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 65},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 67},
       "collapsed": false
     },
     {
       "id": 11,
       "title": "Cache Efficiency Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 16, "x": 0, "y": 66},
+      "gridPos": {"h": 8, "w": 18, "x": 0, "y": 68},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -821,7 +821,7 @@
       "title": "Cache Savings Estimate",
       "description": "Estimated savings if cache reads were charged as input tokens",
       "type": "stat",
-      "gridPos": {"h": 8, "w": 8, "x": 16, "y": 66},
+      "gridPos": {"h": 8, "w": 6, "x": 18, "y": 68},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -870,14 +870,14 @@
       "id": 105,
       "title": "Per-Request Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 74},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 76},
       "collapsed": false
     },
     {
       "id": 13,
       "title": "Recent API Requests",
       "type": "logs",
-      "gridPos": {"h": 10, "w": 24, "x": 0, "y": 75},
+      "gridPos": {"h": 10, "w": 24, "x": 0, "y": 77},
       "datasource": {
         "type": "loki",
         "uid": "loki"
