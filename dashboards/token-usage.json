@@ -186,7 +186,7 @@
       "id": 4,
       "title": "Estimated Cost",
       "type": "stat",
-      "gridPos": {"h": 5, "w": 5, "x": 19, "y": 1},
+      "gridPos": {"h": 5, "w": 6, "x": 18, "y": 1},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -289,10 +289,82 @@
       "collapsed": false
     },
     {
+      "id": 20,
+      "title": "Cache Read",
+      "type": "stat",
+      "gridPos": {"h": 4, "w": 6, "x": 0, "y": 17},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "fixed", "fixedColor": "#3274D9"},
+          "unit": "locale",
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {"mode": "absolute", "steps": [{"color": "#3274D9", "value": null}]}
+        }
+      },
+      "options": {"colorMode": "value", "graphMode": "area", "justifyMode": "auto", "orientation": "auto", "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}, "textMode": "value_and_name"},
+      "targets": [{"datasource": {"type": "prometheus", "uid": "prometheus"}, "expr": "sum(increase(claude_code_token_usage_tokens_total{job=\"otel-collector\",type=\"cacheRead\"}[$__range]))", "refId": "A"}]
+    },
+    {
+      "id": 21,
+      "title": "Cache Creation",
+      "type": "stat",
+      "gridPos": {"h": 4, "w": 6, "x": 6, "y": 17},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "fixed", "fixedColor": "#B877D9"},
+          "unit": "locale",
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {"mode": "absolute", "steps": [{"color": "#B877D9", "value": null}]}
+        }
+      },
+      "options": {"colorMode": "value", "graphMode": "area", "justifyMode": "auto", "orientation": "auto", "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}, "textMode": "value_and_name"},
+      "targets": [{"datasource": {"type": "prometheus", "uid": "prometheus"}, "expr": "sum(increase(claude_code_token_usage_tokens_total{job=\"otel-collector\",type=\"cacheCreation\"}[$__range]))", "refId": "A"}]
+    },
+    {
+      "id": 22,
+      "title": "Output",
+      "type": "stat",
+      "gridPos": {"h": 4, "w": 6, "x": 12, "y": 17},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "fixed", "fixedColor": "#73BF69"},
+          "unit": "locale",
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {"mode": "absolute", "steps": [{"color": "#73BF69", "value": null}]}
+        }
+      },
+      "options": {"colorMode": "value", "graphMode": "area", "justifyMode": "auto", "orientation": "auto", "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}, "textMode": "value_and_name"},
+      "targets": [{"datasource": {"type": "prometheus", "uid": "prometheus"}, "expr": "sum(increase(claude_code_token_usage_tokens_total{job=\"otel-collector\",type=\"output\"}[$__range]))", "refId": "A"}]
+    },
+    {
+      "id": 23,
+      "title": "Input",
+      "type": "stat",
+      "gridPos": {"h": 4, "w": 6, "x": 18, "y": 17},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "fieldConfig": {
+        "defaults": {
+          "color": {"mode": "fixed", "fixedColor": "#FF9830"},
+          "unit": "locale",
+          "decimals": 0,
+          "mappings": [],
+          "thresholds": {"mode": "absolute", "steps": [{"color": "#FF9830", "value": null}]}
+        }
+      },
+      "options": {"colorMode": "value", "graphMode": "area", "justifyMode": "auto", "orientation": "auto", "reduceOptions": {"calcs": ["lastNotNull"], "fields": "", "values": false}, "textMode": "value_and_name"},
+      "targets": [{"datasource": {"type": "prometheus", "uid": "prometheus"}, "expr": "sum(increase(claude_code_token_usage_tokens_total{job=\"otel-collector\",type=\"input\"}[$__range]))", "refId": "A"}]
+    },
+    {
       "id": 14,
       "title": "Token Rate by Type",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 17},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 21},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -331,7 +403,7 @@
       "id": 15,
       "title": "Token Type Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 17},
+      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 21},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -354,7 +426,7 @@
       "id": 6,
       "title": "Cumulative Token Usage",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 25},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 29},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -394,14 +466,14 @@
       "id": 102,
       "title": "Model Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 33},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 37},
       "collapsed": false
     },
     {
       "id": 7,
       "title": "Tokens by Model Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 34},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 38},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -494,7 +566,7 @@
       "id": 8,
       "title": "Model Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 34},
+      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 38},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -516,7 +588,7 @@
       "id": 16,
       "title": "Cumulative by Model",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 42},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 46},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {
@@ -544,14 +616,14 @@
       "id": 103,
       "title": "Session Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 50},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 54},
       "collapsed": false
     },
     {
       "id": 9,
       "title": "Token Usage by Session",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 51},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 55},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -630,7 +702,7 @@
       "id": 17,
       "title": "Top Sessions Distribution",
       "type": "piechart",
-      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 51},
+      "gridPos": {"h": 16, "w": 5, "x": 19, "y": 55},
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "fieldConfig": {
         "defaults": {"color": {"mode": "palette-classic"}, "mappings": [], "unit": "locale", "decimals": 0},
@@ -648,7 +720,7 @@
       "id": 10,
       "title": "Active Sessions Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 59},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 63},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -729,14 +801,14 @@
       "id": 104,
       "title": "Cache Intelligence",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 67},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 71},
       "collapsed": false
     },
     {
       "id": 11,
       "title": "Cache Efficiency Over Time",
       "type": "timeseries",
-      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 68},
+      "gridPos": {"h": 8, "w": 19, "x": 0, "y": 72},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -821,7 +893,7 @@
       "title": "Cache Savings Estimate",
       "description": "Estimated savings if cache reads were charged as input tokens",
       "type": "stat",
-      "gridPos": {"h": 8, "w": 5, "x": 19, "y": 68},
+      "gridPos": {"h": 8, "w": 5, "x": 19, "y": 72},
       "datasource": {
         "type": "prometheus",
         "uid": "prometheus"
@@ -870,14 +942,14 @@
       "id": 105,
       "title": "Per-Request Analysis",
       "type": "row",
-      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 76},
+      "gridPos": {"h": 1, "w": 24, "x": 0, "y": 80},
       "collapsed": false
     },
     {
       "id": 13,
       "title": "Recent API Requests",
       "type": "logs",
-      "gridPos": {"h": 10, "w": 24, "x": 0, "y": 77},
+      "gridPos": {"h": 10, "w": 24, "x": 0, "y": 81},
       "datasource": {
         "type": "loki",
         "uid": "loki"
